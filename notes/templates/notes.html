@@ -1,0 +1,10 @@
+<html>
+    <body>
+        <h1> This are all notes:</h1>
+        <ul>
+            {% for note in notes %}
+                <li>{{ note.title }}</li>
+            {% endfor %}
+        </ul>
+    </body>
+</html>
