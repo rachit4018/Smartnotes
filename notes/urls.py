@@ -4,7 +4,7 @@ from . import views
 
 #urlconfig
 urlpatterns = [
-    path('notes/', views.list),
+    path('notes/', views.HomeView.as_view()),
     path('notes/<int:pk>', views.detail),
 
 ]
