@@ -2,9 +2,11 @@
 
 {% block content %}
         <h1> These are all notes:</h1>
+        {{note.title}}
         <ul>
             {% for note in notes %}
                 <li class="note-li">{{ note.title }}</li>
+                <li class="note-li">{{ note.text }}</li>
             {% endfor %}
         </ul>
 {% endblock %}

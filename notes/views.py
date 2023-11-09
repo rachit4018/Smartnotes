@@ -4,6 +4,7 @@ from django.http import Http404
 # Create your views here.
 from django.views.generic import TemplateView, ListView, DetailView
 from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic import CreateView
 
 
 class HomeView(TemplateView):
@@ -11,11 +12,16 @@ class HomeView(TemplateView):
     all_notes = Note.objects.all()
     extra_content = {'notes': all_notes}
 
+class NotesCreatView(CreateView):
+    model =  Note
+    template_name = 'notes_form.html'
+    fields = ['title','text']
+    success_url = 'list'
 
-# Commenting because we are using templateview for views (The above HomeView template class)    
-# def list(request):
-#     all_notes = Note.objects.all()
-#     return render(request, 'notes.html', {'notes': all_notes})
+#Commenting because we are using templateview for views (The above HomeView template class)    
+def list(request):
+    all_notes = Note.objects.all()
+    return render(request, 'notes.html', {'notes': all_notes})
 
 
 def detail(request, pk):
