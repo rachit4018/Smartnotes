@@ -83,7 +83,7 @@ SmartNotes is a web-based note-taking application built with Django, providing a
    python manage.py runserver
    ```
 
-4. Access the application at [http://127.0.0.1:8000/](http://127.0.0.1:8000/)
+4. Access the application at [http://127.0.0.1:8000/home/login/]
 
 5. Access the admin interface at [http://127.0.0.1:8000/admin/](http://127.0.0.1:8000/admin/) using the superuser credentials.
 
